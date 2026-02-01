@@ -5,14 +5,15 @@
         <title>Project-1</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    
+
     <body>
+
         <div class="fixed-box">
             <div class="upper-fixed-box">
                 <a href="index.html" class="hidden-link2">Home</a>
             </div>
             <div class="upper-fixed-box">
-                <a href="library.html" class="hidden-link2">Review Library</a>
+                <a href="library.html" class="hidden-link2">Library</a>
             </div>
             <div class="upper-fixed-box">
                 <a href="wishlist.html" class="hidden-link2">Wishlist</a>
@@ -27,6 +28,15 @@
                 <a href="links.html" class="hidden-link2">Links</a>
             </div>
         </div>
+
+        <div class="main-box">
+            <form action="/search" method="get" role="search">
+                <label for="query"></label>
+                <input type="text" id="query" name="q" placeholder="Enter search terms...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
     </body>
 
 </html>

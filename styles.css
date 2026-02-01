@@ -1,1 +1,250 @@
 /*stylesheet*/
+
+
+/* fixed sidebar */
+.fixed-box {
+    position: fixed;
+    bottom: 0%;
+    right: 95%;
+    left: 0%;
+    top: 0%;
+
+    background-color: rgb(200, 0, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 0%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+
+/* fixed sidebar boxes */
+@media (min-width:1500px) {
+    .upper-fixed-box {
+        position: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+        height: 50px;
+    
+        background-color: rgb(255, 40, 40);
+        color: black; 
+        padding: 2px;
+        border-radius: 2%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+}
+
+
+
+.main-box {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 5%;
+    top: 0%;
+}
+
+.second-box {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 5%;
+    top: 0%;
+    padding: 0px;
+}
+
+.images-box {
+    width: max-content;
+    height: 60px;
+    overflow: hidden;
+}
+
+
+/* wide */
+.image-box {
+    position: relative;
+    height: 300px;
+    width: 600px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* medium */
+.image-box2 {
+    position: relative;
+    height: 450px;
+    width: 500px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.image-box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* extra wide */
+.image-box3 {
+    position: relative;
+    height: 300px;
+    width: 800px;
+    border: 1px;
+    overflow: hidden;
+}
+.image-box3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.text-box {
+    position: relative;
+    height: 700px;
+    width: 350px;
+    border: 1px solid white;
+}
+
+.bio-box {
+    height: 1000px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+
+/* theme boxes */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Creates 3 equal columns */
+    margin: 15px;
+    gap: 15px;
+} 
+.theme-box {
+    display: flex;
+    background-color: rgb(255, 186, 223);
+    height: 115px;
+    width: 305px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+}
+.theme-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width:1380px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width:1040px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width:700px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+/* link settings */
+.hidden-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+.hidden-link:hover {
+    color: rgb(255, 0, 166);
+}
+
+
+/* fixed bar link settings */
+.hidden-link2 {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+.hidden-link2:hover {
+    color: rgb(255, 240, 130);
+}
+
+
+/* box link settings */
+.hidden-box-link:hover {
+}
+
+
+
+
+/* grid container */
+.holy-grail-grid {
+    display:grid;
+    grid-template-areas:
+        'header'
+        'main-content'
+        'right-sidebar'
+        'footer';
+}
+
+/* general column padding */
+.holy-grail-grid > * {
+    padding:1rem;
+}
+
+/* assign columns to grid areas */
+.holy-grail-grid > .header {
+    grid-area:header;
+    background:#fff134;
+}
+.holy-grail-grid > .main-content {
+    grid-area:main-content;
+    background:#fff;
+}
+.holy-grail-grid > .right-sidebar {
+    grid-area:right-sidebar;
+    background:#77dded;
+}
+.holy-grail-grid > .footer {
+    grid-area:footer;
+    background:#c772f1;
+}
+
+/* tablet breakpoint */
+@media (min-width:1000px) {
+    .holy-grail-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'header header'
+            'main-content main-content'
+            'right-sidebar right-sidebar'
+            'footer footer';
+    }
+}
+
+/* desktop breakpoint */
+@media (min-width:1000px) {
+    .holy-grail-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            'header header header header'
+            'main-content main-content main-content right-sidebar'
+            'footer footer footer footer';
+    }
+}
