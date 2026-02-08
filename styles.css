@@ -82,6 +82,18 @@ color: rgb(130, 10, 10);
     top: 0%;
 }
 
+.main-box2 {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 5%;
+    top: 0%;
+
+    background: linear-gradient(to bottom, #ffe95e 0%, #fff08f 3%, #fff4b8 8%, #fffae0 15%, #fffef4 25%, #ffffff 100%);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
 .second-box {
     position: absolute;
     bottom: 0%;
