@@ -24,7 +24,7 @@
         bottom: 0%;
         top: 0%;
         left: 0%;
-        width: 10px;
+        width: 25px;
     
         background-color: rgb(200, 0, 0);
         color: black;
@@ -44,11 +44,11 @@
         text-align: center;
         align-content: center;
         flex-direction: column;
-        height: 20px;
-        width: 60px;
-        margin-top: 15px;
-        margin-left: -25px;
-        margin-bottom: 45px;
+        height: 30px;
+        width: 70px;
+        margin-top: 20px;
+        margin-left: -23px;
+        margin-bottom: 50px;
 
         background-color: rgb(255, 40, 40);
         color: black; 
@@ -148,7 +148,8 @@ color: rgb(130, 10, 10);
         bottom: 0%;
         right: 0%;
         top: 0%;
-        left: 10px;
+        left: 20px;
+        padding-left: 25px;
     }
 }
 
@@ -172,7 +173,7 @@ color: rgb(130, 10, 10);
         bottom: 0%;
         right: 0%;
         top: 0%;
-        left: 10px;
+        left: 20px;
         padding-left: 20px;
     
         background: linear-gradient(to bottom, #ffe95e 0%, #fff08f 3%, #fff4b8 8%, #fffae0 15%, #fffef4 25%, #ffffff 100%);
@@ -275,7 +276,6 @@ color: rgb(130, 10, 10);
     align-items: center;
     padding: 0px;
     border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0);
     overflow: hidden;
 }
 .theme-box img {
