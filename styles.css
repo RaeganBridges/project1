@@ -234,8 +234,8 @@ color: rgb(130, 10, 10);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin: 0px;
-    padding: 70px;
-    gap: 30px;
+    padding: 60px;
+    gap: 25px;
     background-color: rgb(220, 237, 255);
 }
 
@@ -413,8 +413,8 @@ color: rgb(255, 40, 40);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin: 0px;
-    padding: 70px;
-    gap: 30px;
+    padding: 60px;
+    gap: 25px;
     background-color: rgb(255, 247, 188);
 }
 
