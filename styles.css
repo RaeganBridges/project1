@@ -234,7 +234,7 @@ color: rgb(130, 10, 10);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin: 0px;
-    padding: 60px;
+    padding: 50px;
     gap: 25px;
     background-color: rgb(220, 237, 255);
 }
