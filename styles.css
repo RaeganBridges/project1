@@ -191,154 +191,175 @@ color: rgb(130, 10, 10);
 
 .grid-container5 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(14, 1fr);
     margin: 0px;
-    padding-top: 90px;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-bottom: 20px;
-    gap: 5px;
+    padding: clamp(15px, 5vw, 70px);
+    padding-top: clamp(30px, 8vw, 90px);
+    padding-bottom: clamp(10px, 2vw, 20px);
+    gap: 0 2px;
     background-color: rgb(220, 237, 255);
     box-sizing: border-box;
 }
 
-@media (max-width:1400px) {
-    .grid-container5 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 0px;
-        padding: 70px;
-        gap: 5px;
-        background-color: rgb(220, 237, 255);
-    }
-}
-
 @media (max-width:900px) {
     .grid-container5 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 0px;
-        padding: 70px;
-        gap: 5px;
-        background-color: rgb(220, 237, 255);
+        grid-template-columns: repeat(7, 1fr);
+        padding: clamp(10px, 3vw, 40px);
+        padding-right: clamp(16px, 5vw, 56px);
+        gap: 0 2px;
+        row-gap: 2px;
+    }
+    .grid-container5 .circle,
+    .grid-container5 .circle2,
+    .grid-container5 .circle3 {
+        margin: 0;
+        width: clamp(42px, 11vw, 88px);
+        height: clamp(42px, 11vw, 88px);
+    }
+    .grid-container5 .inner-circle,
+    .grid-container5 .inner-circle2,
+    .grid-container5 .inner-circle3 {
+        width: clamp(32px, 8.5vw, 68px);
+        height: clamp(32px, 8.5vw, 68px);
     }
 }
 
 
 .grid-container6 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(14, 1fr);
     margin: 0px;
-    padding-top: 90px;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-bottom: 20px;
-    gap: 5px;
+    padding: clamp(15px, 5vw, 70px);
+    padding-top: clamp(30px, 8vw, 90px);
+    padding-bottom: clamp(10px, 2vw, 20px);
+    gap: 0 2px;
     background-color: rgb(255, 251, 204);
     box-sizing: border-box;
 }
 
-@media (max-width:1400px) {
-    .grid-container6 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 0px;
-        padding: 70px;
-        gap: 5px;
-        background-color: rgb(255, 251, 204);
-    }
+.grid-container6-two-rows {
+    display: none;
 }
 
 @media (max-width:900px) {
-    .grid-container6 {
+    .grid-container6-single {
+        display: none;
+    }
+    .grid-container6-two-rows {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 0px;
-        padding: 70px;
-        gap: 5px;
-        background-color: rgb(255, 251, 204);
+        grid-template-columns: repeat(7, 1fr);
+        padding: clamp(10px, 3vw, 40px);
+        padding-right: clamp(16px, 5vw, 56px);
+        gap: 0 2px;
+        row-gap: 2px;
+    }
+    .grid-container6 {
+        grid-template-columns: repeat(7, 1fr);
+        padding: clamp(10px, 3vw, 40px);
+        padding-right: clamp(16px, 5vw, 56px);
+        gap: 0 2px;
+        row-gap: 2px;
+    }
+    .grid-container6 .circle,
+    .grid-container6 .circle2,
+    .grid-container6 .circle3 {
+        margin: 0;
+        width: clamp(42px, 11vw, 88px);
+        height: clamp(42px, 11vw, 88px);
+    }
+    .grid-container6 .inner-circle,
+    .grid-container6 .inner-circle2,
+    .grid-container6 .inner-circle3 {
+        width: clamp(32px, 8.5vw, 68px);
+        height: clamp(32px, 8.5vw, 68px);
     }
 }
 
 
 
 .circle {
-    width: 85px;
-    height: 85px;
+    width: clamp(36px, 5.5vw, 85px);
+    height: clamp(36px, 5.5vw, 85px);
     border: 3px solid #7da0ec;
     background-color: #9cbbff;
     border-radius: 50%; /* Makes the div a circle */
     display: flex;
     justify-content: center; /* Centers horizontally */
-    align-items: center; 
-    margin: 5px;
+    align-items: center;
+    margin: 0 1px;
+    box-sizing: border-box;
+    container-type: inline-size;
 }
 .inner-circle {
-    width: 63px;
-    height: 63px;
+    width: clamp(28px, 4.2vw, 65px);
+    height: clamp(28px, 4.2vw, 65px);
     border: 3px solid #6f95e4;
     background-color: #81a9ff;
     border-radius: 50%;
-
     display: flex;
-    justify-content: center; /* Horizontal */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: xxx-large;
+    font-size: 50cqw;
     transform: rotate(5deg);
     color: #0a255e;
+    box-sizing: border-box;
 }
 
 .circle2 {
-    width: 85px;
-    height: 85px;
+    width: clamp(36px, 5.5vw, 85px);
+    height: clamp(36px, 5.5vw, 85px);
     border: 3px solid #e170aa;
     background-color: #ff8fc9;
-    border-radius: 50%; /* Makes the div a circle */
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; 
-    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    box-sizing: border-box;
+    container-type: inline-size;
 }
 .inner-circle2 {
-    width: 63px;
-    height: 63px;
+    width: clamp(28px, 4.2vw, 65px);
+    height: clamp(28px, 4.2vw, 65px);
     border: 3px solid #d869a2;
     background-color: #f478b8;
     border-radius: 50%;
-
     display: flex;
-    justify-content: center; /* Horizontal */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: xxx-large;
+    font-size: 50cqw;
     transform: rotate(-5deg);
     color: #0a255e;
+    box-sizing: border-box;
 }
 
 .circle3 {
-    width: 85px;
-    height: 85px;
+    width: clamp(36px, 5.5vw, 85px);
+    height: clamp(36px, 5.5vw, 85px);
     border: 3px solid #ddc868;
     background-color: #ffe88d;
-    border-radius: 50%; /* Makes the div a circle */
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; 
-    margin: -1px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    container-type: inline-size;
 }
 .inner-circle3 {
-    width: 63px;
-    height: 63px;
+    width: clamp(28px, 4.2vw, 65px);
+    height: clamp(28px, 4.2vw, 65px);
     border: 3px solid #dbc562;
     background-color: #f9dd6a;
     border-radius: 50%;
-
     display: flex;
-    justify-content: center; /* Horizontal */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: xxx-large;
+    font-size: 50cqw;
+    box-sizing: border-box;
 }
 
 
