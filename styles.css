@@ -853,6 +853,23 @@ color: rgb(119, 3, 46);
     }
 }
 
+/* phone: single column, full-width boxes, keep proportions and margins */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 15px;
+        gap: 15px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .theme-box {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 305 / 115;
+        min-height: 0;
+    }
+}
 
 .theme-box:hover img {
     transform: scale(1.05); /* Zooms the image to 120% of its size when hovered */
