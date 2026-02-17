@@ -1,5 +1,10 @@
 /*stylesheet*/
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
 /* fixed sidebar */
 .fixed-box {
@@ -299,7 +304,7 @@ color: rgb(130, 10, 10);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 50cqw;
     transform: rotate(5deg);
     color: #0a255e;
@@ -328,7 +333,7 @@ color: rgb(130, 10, 10);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 50cqw;
     transform: rotate(-5deg);
     color: #0a255e;
@@ -357,7 +362,7 @@ color: rgb(130, 10, 10);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 50cqw;
     box-sizing: border-box;
 }
@@ -406,7 +411,7 @@ color: rgb(130, 10, 10);
     text-decoration: none;
     color: rgb(131, 84, 46);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -474,7 +479,7 @@ color: rgb(157, 42, 0);
     text-decoration: none;
     color: rgb(131, 84, 46);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -518,7 +523,7 @@ color: rgb(157, 42, 0);
     text-decoration: none;
     color: rgb(131, 84, 46);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -588,7 +593,7 @@ color: rgb(157, 42, 0);
     text-decoration: none;
     color: rgb(151, 58, 70);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -656,7 +661,7 @@ color: rgb(119, 3, 46);
     text-decoration: none;
     color: rgb(151, 58, 70);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -700,7 +705,7 @@ color: rgb(119, 3, 46);
     text-decoration: none;
     color: rgb(151, 58, 70);
     cursor: default;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: medium;
     line-height: 18px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
@@ -935,7 +940,7 @@ background-color: rgb(170, 170, 170);
 
 #list-settings {
     line-height: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: left;
     font-size: large;
 }
