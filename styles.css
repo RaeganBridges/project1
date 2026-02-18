@@ -283,7 +283,46 @@ color: rgb(130, 10, 10);
     }
 }
 
-
+@media (max-width: 700px) {
+    .grid-container5,
+    .grid-container6-two-rows {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .grid-container5 {
+        background-color: rgb(220, 237, 255);
+    }
+    .grid-container5::after {
+        content: '';
+        position: absolute;
+        bottom: -36px;
+        left: 0;
+        right: 0;
+        height: 36px;
+        background: linear-gradient(to bottom, rgb(220, 237, 255), transparent);
+        pointer-events: none;
+    }
+    .grid-container6-two-rows {
+        background-color: rgb(255, 251, 204);
+    }
+    .grid-container6-two-rows::after {
+        content: '';
+        position: absolute;
+        bottom: -36px;
+        left: 0;
+        right: 0;
+        height: 36px;
+        background: linear-gradient(to bottom, rgb(255, 251, 204), transparent);
+        pointer-events: none;
+    }
+    .grid-container3 {
+        padding-top: 20px;
+    }
+    .grid-container4 {
+        padding-top: 20px;
+    }
+}
 
 .circle {
     width: clamp(36px, 5.5vw, 85px);
@@ -944,6 +983,29 @@ background-color: rgb(170, 170, 170);
     transition: opacity 0.3s ease;
     z-index: 0;
 }
+@keyframes heart-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+.themes-page .hidden-box-link .theme-box2::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c85050' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    pointer-events: none;
+}
+.themes-page .hidden-box-link:hover .theme-box2::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f472b6' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+    animation: heart-shake 0.4s ease-in-out infinite;
+}
 .themes-page .theme-box2 .theme-box2-label {
     position: absolute;
     inset: 0;
@@ -980,6 +1042,30 @@ background-color: rgb(170, 170, 170);
 @media (max-width:700px) {
     .grid-container2 {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .themes-page .grid-container2 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .themes-page .theme-box2 {
+        width: 100%;
+        max-width: 100%;
+        height: 120px;
+    }
+    .themes-page .theme-box2:hover img,
+    .themes-page .hidden-box-link:hover .theme-box2 img {
+        opacity: 0;
+    }
+    .themes-page .hidden-box-link:hover .theme-box2 {
+        background-color: rgb(25, 25, 25);
+    }
+    .themes-page .theme-box2:hover .theme-box2-label,
+    .themes-page .hidden-box-link:hover .theme-box2 .theme-box2-label {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
@@ -1082,6 +1168,49 @@ background-color: rgb(170, 170, 170);
         'main-content';
     grid-template-columns: minmax(0, 1fr);
 }
+
+@media (max-width: 700px) {
+    .holy-grail-grid.themes-page {
+        position: relative;
+    }
+    .holy-grail-grid.themes-page::after {
+        content: '';
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        background: linear-gradient(to top, rgba(255, 253, 250, 0.25), transparent);
+        pointer-events: none;
+        z-index: 50;
+    }
+    .themes-landing {
+        position: relative;
+    }
+    .themes-landing::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        background: linear-gradient(to bottom, rgba(255, 253, 250, 0.25), transparent);
+        pointer-events: none;
+        z-index: 50;
+    }
+    .themes-landing::after {
+        content: '';
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        background: linear-gradient(to top, rgba(255, 253, 250, 0.25), transparent);
+        pointer-events: none;
+        z-index: 50;
+    }
+}
+
 @media (min-width:1000px) {
     .holy-grail-grid.themes-page {
         grid-template-areas:
