@@ -149,6 +149,9 @@ color: rgb(130, 10, 10);
     right: 0%;
     left: 5%;
     top: 0%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 @media (max-width:1549px) {
@@ -919,6 +922,51 @@ background-color: rgb(170, 170, 170);
     height: 100%;
     object-fit: contain;
 }
+
+/* theme pages: inverted boxes (white text on black), images on hover only */
+.themes-page .theme-box2 {
+    background-color: rgb(25, 25, 25);
+    color: rgb(248, 248, 245);
+    border-color: rgb(248, 248, 245);
+    position: relative;
+    transition: background-color 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.themes-page .theme-box2 img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+.themes-page .theme-box2 .theme-box2-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+.themes-page .theme-box2:hover img,
+.themes-page .hidden-box-link:hover .theme-box2 img {
+    opacity: 1;
+}
+.themes-page .hidden-box-link:hover .theme-box2 {
+    background-color: rgb(255, 255, 255);
+}
+.themes-page .theme-box2:hover .theme-box2-label,
+.themes-page .hidden-box-link:hover .theme-box2 .theme-box2-label {
+    opacity: 0;
+    pointer-events: none;
+}
 @media (max-width:1380px) {
     .grid-container2 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -976,53 +1024,90 @@ background-color: rgb(170, 170, 170);
     grid-template-areas:
         'header'
         'main-content'
-        'right-sidebar'
-        'footer';
+        'right-sidebar';
+    grid-template-columns: minmax(0, 1fr);
+    background: url('images/wallpaper.png') center center / cover no-repeat fixed;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* general column padding */
 .holy-grail-grid > * {
     padding:1rem;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* assign columns to grid areas */
 .holy-grail-grid > .header {
     grid-area:header;
     background:#ffef97;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.holy-grail-grid > .header .header-prev {
+    flex: 0 0 auto;
+}
+.holy-grail-grid > .header .header-set-name {
+    flex: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+.holy-grail-grid > .header .header-next {
+    flex: 0 0 auto;
 }
 .holy-grail-grid > .main-content {
     grid-area:main-content;
-    background:#fff;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 .holy-grail-grid > .right-sidebar {
     grid-area:right-sidebar;
-    background:rgb(220, 237, 255);
-    min-width: 350px;
+    background: rgba(220, 237, 255, 0.7);
+    min-width: 100px;
+    min-height: 91.5vh;
 }
 .holy-grail-grid > .footer {
-    grid-area:footer;
-    background:#ffb8b8;
+    display: none;
+}
+
+/* themes pages: no right sidebar */
+.holy-grail-grid.themes-page {
+    grid-template-areas:
+        'header'
+        'main-content';
+    grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width:1000px) {
+    .holy-grail-grid.themes-page {
+        grid-template-areas:
+            'header header'
+            'main-content main-content';
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 /* tablet breakpoint */
 @media (min-width:1000px) {
     .holy-grail-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         grid-template-areas:
             'header header'
             'main-content main-content'
-            'right-sidebar right-sidebar'
-            'footer footer';
+            'right-sidebar right-sidebar';
     }
 }
 
 /* desktop breakpoint */
 @media (min-width:1000px) {
     .holy-grail-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
         grid-template-areas:
             'header header header header'
-            'main-content main-content main-content right-sidebar'
-            'footer footer footer footer';
+            'main-content main-content main-content right-sidebar';
     }
 }
