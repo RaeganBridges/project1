@@ -856,6 +856,15 @@ color: rgb(119, 3, 46);
 
 
 
+/* themes landing page: centered content with even margins */
+.themes-landing {
+    padding: clamp(8px, 2vw, 20px) clamp(20px, 5vw, 60px) clamp(8px, 2vw, 20px) clamp(28px, 6vw, 70px);
+}
+.themes-landing .grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* theme boxes */
 .grid-container {
     display: grid;
