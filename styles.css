@@ -856,15 +856,6 @@ color: rgb(119, 3, 46);
 
 
 
-/* themes landing page: centered content with even margins */
-.themes-landing {
-    padding: clamp(8px, 2vw, 20px) clamp(20px, 5vw, 60px) clamp(8px, 2vw, 20px) clamp(28px, 6vw, 70px);
-}
-.themes-landing .grid-container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 /* theme boxes */
 .grid-container {
     display: grid;
@@ -919,11 +910,13 @@ color: rgb(119, 3, 46);
         box-sizing: border-box;
     }
     .theme-box {
-        width: 100%;
-        max-width: 100%;
+        width: calc(100% - 15px);
+        max-width: calc(100% - 15px);
         height: auto;
         aspect-ratio: 305 / 115;
         min-height: 0;
+        margin: 0;
+        margin-right: auto;
     }
 }
 
