@@ -1169,7 +1169,7 @@ background-color: rgb(170, 170, 170);
 /* assign columns to grid areas */
 .holy-grail-grid > .header {
     grid-area:header;
-    background:#ffef97;
+    background: rgba(255, 239, 151, 0.75);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1259,7 +1259,7 @@ background-color: rgb(170, 170, 170);
 
 .holy-grail-grid > .right-sidebar {
     grid-area:right-sidebar;
-    background: rgba(220, 237, 255, 0.92);
+    background: rgba(220, 237, 255, 0.75);
     min-width: 200px;
     min-height: 100vh;
     border-radius: 6px;
