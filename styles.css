@@ -1002,13 +1002,13 @@ background-color: rgb(170, 170, 170);
     object-fit: contain;
 }
 
-/* theme pages: inverted boxes (white text on black), images on hover only */
+/* theme pages: image visible by default, text on hover */
 .themes-page .theme-box2 {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(255, 255, 255);
     color: rgb(248, 248, 245);
     border-color: rgb(248, 248, 245);
     position: relative;
-    transition: background-color 0s;
+    transition: background-color 0.15s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1019,8 +1019,8 @@ background-color: rgb(170, 170, 170);
     inset: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease 0.15s;
     z-index: 0;
 }
 @keyframes heart-shake {
@@ -1055,19 +1055,21 @@ background-color: rgb(170, 170, 170);
     text-align: center;
     padding: 1rem;
     z-index: 1;
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.15s;
 }
 .themes-page .theme-box2:hover img,
 .themes-page .hidden-box-link:hover .theme-box2 img {
-    opacity: 1;
+    opacity: 0;
 }
 .themes-page .hidden-box-link:hover .theme-box2 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(25, 25, 25, 0.9);
+    transition: background-color 0.3s ease 0.3s;
 }
 .themes-page .theme-box2:hover .theme-box2-label,
 .themes-page .hidden-box-link:hover .theme-box2 .theme-box2-label {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    pointer-events: auto;
 }
 @media (max-width:1380px) {
     .grid-container2 {
@@ -1094,18 +1096,29 @@ background-color: rgb(170, 170, 170);
         width: 100%;
         max-width: 100%;
         height: 120px;
+        background-color: rgba(25, 25, 25, 0.9);
+        transition: background-color 0.3s ease 0.3s;
+    }
+    .themes-page .theme-box2 img {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .themes-page .theme-box2 .theme-box2-label {
+        opacity: 1;
+        transition: opacity 0.3s ease 0.3s;
     }
     .themes-page .theme-box2:hover img,
     .themes-page .hidden-box-link:hover .theme-box2 img {
-        opacity: 0;
+        opacity: 1;
     }
     .themes-page .hidden-box-link:hover .theme-box2 {
-        background-color: rgb(25, 25, 25);
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.15s ease;
     }
     .themes-page .theme-box2:hover .theme-box2-label,
     .themes-page .hidden-box-link:hover .theme-box2 .theme-box2-label {
-        opacity: 1;
-        pointer-events: auto;
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
