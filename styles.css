@@ -61,6 +61,7 @@ body {
         background-color: rgb(255, 40, 40);
         color: black; 
         cursor: default;
+        font-size: 14px;
 
         border-radius: 5%;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -90,6 +91,7 @@ body {
         background-color: rgb(255, 40, 40);
         color: black; 
         cursor: default;
+        font-size: 14px;
 
         padding: 2px;
         border-radius: 4%;
@@ -1188,6 +1190,7 @@ background-color: rgb(170, 170, 170);
     justify-content: space-between;
     flex-wrap: nowrap;
     font-weight: bold;
+    font-size: 18px;
 }
 .holy-grail-grid > .header .header-prev {
     flex: 0 0 auto;
