@@ -1222,19 +1222,22 @@ background-color: rgb(170, 170, 170);
     }
 }
 
-/* Themes folder: keep header text left-aligned at every breakpoint */
-.holy-grail-grid.themes-page > .header {
+/* Themes folder and Links page: keep header text left-aligned at every breakpoint */
+.holy-grail-grid.themes-page > .header,
+.holy-grail-grid.links-page > .header {
     display: flex;
     justify-content: flex-start;
     text-align: left;
 }
 @media (max-width: 1000px) {
-    .holy-grail-grid.themes-page > .header {
+    .holy-grail-grid.themes-page > .header,
+    .holy-grail-grid.links-page > .header {
         display: flex;
         grid-template-columns: unset;
         justify-items: unset;
     }
-    .holy-grail-grid.themes-page > .header .header-set-name {
+    .holy-grail-grid.themes-page > .header .header-set-name,
+    .holy-grail-grid.links-page > .header .header-set-name {
         text-align: left;
         padding-left: 10px;
     }
@@ -1272,6 +1275,20 @@ background-color: rgb(170, 170, 170);
     transform: translate(-3px, 3px);
     box-shadow: -2px 2px 0 black;
 }
+.set-details-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.set-details-link:hover {
+    color: inherit;
+}
+.holy-grail-grid.links-page .set-details p {
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.5s ease;
+}
+.holy-grail-grid.links-page .set-details p:hover {
+    background: rgb(220, 237, 255);
+}
 
 .holy-grail-grid > .right-sidebar {
     grid-area:right-sidebar;
@@ -1280,7 +1297,7 @@ background-color: rgb(170, 170, 170);
     min-height: 100vh;
     border-radius: 6px;
     border: 2px solid black;
-    margin: 0.5rem;
+    margin: 25px;
     box-shadow: -5px 5px 0 black;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -1393,7 +1410,8 @@ background-color: rgb(170, 170, 170);
 }
 
 @media (min-width:1000px) {
-    .holy-grail-grid.themes-page {
+    .holy-grail-grid.themes-page,
+    .holy-grail-grid.links-page {
         grid-template-areas:
             'header header'
             'main-content main-content';
