@@ -1160,6 +1160,10 @@ background-color: rgb(170, 170, 170);
     .themes-page .grid-container2 {
         grid-template-columns: 1fr;
         gap: 12px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
     }
     .themes-page .theme-box2 {
         width: 100%;
@@ -1355,6 +1359,10 @@ background-color: rgb(170, 170, 170);
 }
 .holy-grail-grid.links-page .set-details p:hover {
     background: rgb(220, 237, 255);
+}
+.holy-grail-grid.themes-page .set-details p,
+.holy-grail-grid.links-page .set-details p {
+    width: max-content;
 }
 .holy-grail-grid.themes-page .set-details {
     margin-bottom: 2rem;
