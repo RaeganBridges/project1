@@ -1356,6 +1356,12 @@ background-color: rgb(170, 170, 170);
 .holy-grail-grid.links-page .set-details p:hover {
     background: rgb(220, 237, 255);
 }
+.holy-grail-grid.themes-page .set-details {
+    margin-bottom: 2rem;
+}
+.holy-grail-grid.themes-page .main-content > p {
+    margin-top: 1.25rem;
+}
 
 .holy-grail-grid > .right-sidebar {
     grid-area:right-sidebar;
@@ -1432,6 +1438,8 @@ background-color: rgb(170, 170, 170);
         'header'
         'main-content';
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
 }
 
 @media (max-width: 700px) {
